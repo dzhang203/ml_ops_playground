@@ -9,15 +9,17 @@
 
 ## Setup
 
-**Prerequisites:** Python 3.9+, Kaggle account
+**Prerequisites:** Python 3.12+, Poetry, Kaggle account
 
 ```bash
-# Create and activate a virtual environment
-python -m venv env
-source env/bin/activate  # Windows: env\Scripts\activate
+# Install dependencies using Poetry
+poetry install
 
-# Install dependencies
-pip install feast mlflow lightgbm pandas scikit-learn
+# Activate the Poetry virtual environment
+poetry shell
+
+# Or run commands within the Poetry environment without activating
+poetry run <command>
 ```
 
 **Project structure:**

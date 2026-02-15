@@ -271,7 +271,7 @@ version = "6.3.0"
 description = "An easy safelist-based HTML-sanitizing tool."
 optional = false
 python-versions = ">=3.10"
-groups = ["dev"]
+groups = ["main", "dev"]
 files = [
     {file = "bleach-6.3.0-py3-none-any.whl", hash = "sha256:fe10ec77c93ddf3d13a73b035abaac7a9f5e436513864ccdad516693213c65d6"},
     {file = "bleach-6.3.0.tar.gz", hash = "sha256:6f3b91b1c0a02bb9a78b5a454c92506aa0fdf197e1d5e114d2e00c6f64306d22"},
@@ -2154,6 +2154,45 @@ files = [
     {file = "jupyterlab_widgets-3.0.16-py3-none-any.whl", hash = "sha256:45fa36d9c6422cf2559198e4db481aa243c7a32d9926b500781c830c80f7ecf8"},
     {file = "jupyterlab_widgets-3.0.16.tar.gz", hash = "sha256:423da05071d55cf27a9e602216d35a3a65a3e41cdf9c5d3b643b814ce38c19e0"},
 ]
+
+[[package]]
+name = "kaggle"
+version = "1.8.4"
+description = "Access Kaggle resources anywhere"
+optional = false
+python-versions = ">=3.11"
+groups = ["main"]
+files = [
+    {file = "kaggle-1.8.4-py3-none-any.whl", hash = "sha256:b9cb6da6e99ce8ef22f8e84e75da2c82f814c2e548bfa07f3db220c9aeeaa8ba"},
+    {file = "kaggle-1.8.4.tar.gz", hash = "sha256:d71137f98312581726047cadceb28992c53ef905fe38c6dd9d6d3bfc4e43c982"},
+]
+
+[package.dependencies]
+bleach = "*"
+kagglesdk = ">=0.1.15,<1.0"
+packaging = "*"
+protobuf = "*"
+python-dateutil = "*"
+python-slugify = "*"
+requests = "*"
+tqdm = "*"
+urllib3 = ">=1.15.1"
+
+[[package]]
+name = "kagglesdk"
+version = "0.1.15"
+description = "Bindings to access kaggle's external-facing APIs"
+optional = false
+python-versions = ">=3.9"
+groups = ["main"]
+files = [
+    {file = "kagglesdk-0.1.15-py3-none-any.whl", hash = "sha256:f7b49e795d5d0d72ba3612e6e6a1f39296978dbc7cd44d2015502e8bb1039738"},
+    {file = "kagglesdk-0.1.15.tar.gz", hash = "sha256:a26ecc64b1334b5a4c5cadd076bdeb503c04eab51c10d7cac2ff04959c9baba0"},
+]
+
+[package.dependencies]
+protobuf = "*"
+requests = "*"
 
 [[package]]
 name = "kiwisolver"
@@ -4071,6 +4110,24 @@ files = [
 dev = ["backports.zoneinfo ; python_version < \"3.9\"", "black", "build", "freezegun", "mdx_truly_sane_lists", "mike", "mkdocs", "mkdocs-awesome-pages-plugin", "mkdocs-gen-files", "mkdocs-literate-nav", "mkdocs-material (>=8.5)", "mkdocstrings[python]", "msgspec ; implementation_name != \"pypy\"", "mypy", "orjson ; implementation_name != \"pypy\"", "pylint", "pytest", "tzdata", "validate-pyproject[all]"]
 
 [[package]]
+name = "python-slugify"
+version = "8.0.4"
+description = "A Python slugify application that also handles Unicode"
+optional = false
+python-versions = ">=3.7"
+groups = ["main"]
+files = [
+    {file = "python-slugify-8.0.4.tar.gz", hash = "sha256:59202371d1d05b54a9e7720c5e038f928f45daaffe41dd10822f3907b937c856"},
+    {file = "python_slugify-8.0.4-py2.py3-none-any.whl", hash = "sha256:276540b79961052b66b7d116620b36518847f52d5fd9e3a70164fc8c50faa6b8"},
+]
+
+[package.dependencies]
+text-unidecode = ">=1.3"
+
+[package.extras]
+unidecode = ["Unidecode (>=1.1.1)"]
+
+[[package]]
 name = "pytz"
 version = "2025.2"
 description = "World timezone definitions, modern and historical"
@@ -5006,6 +5063,18 @@ test = ["pre-commit", "pytest (>=7.0)", "pytest-timeout"]
 typing = ["mypy (>=1.6,<2.0)", "traitlets (>=5.11.1)"]
 
 [[package]]
+name = "text-unidecode"
+version = "1.3"
+description = "The most basic Text::Unidecode port"
+optional = false
+python-versions = "*"
+groups = ["main"]
+files = [
+    {file = "text-unidecode-1.3.tar.gz", hash = "sha256:bad6603bb14d279193107714b288be206cac565dfa49aa5b105294dd5c4aab93"},
+    {file = "text_unidecode-1.3-py2.py3-none-any.whl", hash = "sha256:1311f10e8b895935241623731c2ba64f4c455287888b18189350b67134a822e8"},
+]
+
+[[package]]
 name = "threadpoolctl"
 version = "3.6.0"
 description = "threadpoolctl"
@@ -5483,7 +5552,7 @@ version = "0.5.1"
 description = "Character encoding aliases for legacy web content"
 optional = false
 python-versions = "*"
-groups = ["dev"]
+groups = ["main", "dev"]
 files = [
     {file = "webencodings-0.5.1-py2.py3-none-any.whl", hash = "sha256:a0af1213f3c2226497a97e2b3aa01a7e4bee4f403f95be16fc9acd2947514a78"},
     {file = "webencodings-0.5.1.tar.gz", hash = "sha256:b36a1c245f2d304965eb4e0a82848379241dc04b865afcc4aab16748587e1923"},
@@ -5630,4 +5699,4 @@ type = ["pytest-mypy"]
 [metadata]
 lock-version = "2.1"
 python-versions = ">=3.12"
-content-hash = "637ffd668409db2ab6d59429175cc8a7532c983f3e0bdf34aedbf9ef1a88ac0b"
+content-hash = "1d546549d683b3a1dbd8326626c86a43c7f096fdc83349ad872b07aafa8ecc51"
