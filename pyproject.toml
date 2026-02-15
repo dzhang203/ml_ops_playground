@@ -1,0 +1,28 @@
+[project]
+name = "ml-ops-playground"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "David Zhang",email = "dzhang203@gmail.com"}
+]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "feast (>=0.59.0,<0.60.0)",
+    "mlflow (>=3.9.0,<4.0.0)",
+    "lightgbm (>=4.6.0,<5.0.0)",
+    "pandas (<3.0.0)",
+    "scikit-learn (>=1.8.0,<2.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[dependency-groups]
+dev = [
+    "jupyter (>=1.1.1,<2.0.0)",
+    "notebook (>=7.5.3,<8.0.0)",
+    "ipykernel (>=7.2.0,<8.0.0)"
+]
