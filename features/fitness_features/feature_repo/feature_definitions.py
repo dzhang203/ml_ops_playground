@@ -16,7 +16,7 @@ from feast.types import Float32, Float64, Int64
 # ============================================================================
 # Define the record entity - features will be grouped by record_id
 #
-# ✓ DONE: Created Entity for records
+# DONE: Created Entity for records
 record = Entity(
     name="record",
     join_keys=["record_id"],
@@ -29,7 +29,7 @@ record = Entity(
 # ============================================================================
 # Define where Feast should read the raw data from
 #
-# ✓ DONE: Created FileSource pointing to the dataset
+# DONE: Created FileSource pointing to the dataset
 fitness_source = FileSource(
     path="../../../data/full_data_cleaned.csv",
     timestamp_field="synthetic_event_timestamp",
