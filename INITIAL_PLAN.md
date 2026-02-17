@@ -78,6 +78,24 @@ ml_ops_playground/
 
 8. **Retrain LightGBM** on the Feast-backed feature set and compare metrics against the baseline. The improvement (or lack thereof) is secondary — the point is experiencing the workflow.
 
+#### Implementation Approach (Phase 1B)
+
+**Hybrid learning workflow combining CLI and Python code:**
+
+- **`FEAST_WALKTHROUGH.md`**: Step-by-step guide explaining when to use CLI vs. notebook, with explanations of each Feast command
+- **`feature_repo/features.py`**: Template with TODOs and comments — you implement Entity, FileSource, and FeatureViews yourself
+- **`notebooks/02_feast_features.ipynb`**: Template notebook with markdown sections and empty code cells — you write all Python code yourself
+
+**Workflow sequence:**
+1. Notebook: Compute engineered features (rolling stats, acceleration magnitude) and save to CSV
+2. CLI: Run `feast init`, `feast apply`, `feast materialize`
+3. Notebook: Use `get_historical_features()` for point-in-time joins, train model, compare to baseline
+
+**Learning maximized by:**
+- Writing feature definitions yourself (not pre-written)
+- Running CLI commands yourself (experiencing Feast workflow)
+- Implementing point-in-time joins yourself (understanding the core concept)
+
 ### Key concepts practiced
 
 - Feature definitions as version-controlled code
